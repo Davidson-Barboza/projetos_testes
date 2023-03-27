@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin - Multiplicação</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(57, 48, 116);
+            font: normal 20px Arial;
+            color: whitesmoke;
+
+        }
+        section#secao{
+            font: normal 16px Arial;
+            background-color: whitesmoke;
+            color: rgb(76, 76, 76);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+            width: 500px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Multiplicação de dois valores</h1>
+    
+    <section id="secao">
+        <h3>Informe o primeiro valor: <input type="number" name="n1" id="n1"></h3>
+        <h3>Informe o segundo valor: <input type="number" name="n2" id="n2"></h3>
+        <input type="button" value="Multiplicar" id="mult" onclick="multiplicacao()">
+        <p id="resultado"></p>
+    </section>
+
+    <script>
+        function multiplicacao(){
+            let numero1 = document.getElementById('n1')
+            let numero2 = document.getElementById('n2')
+            let n1 = Number(numero1.value)
+            let n2 = Number(numero2.value)
+            let resp = document.getElementById('resultado')
+            
+            if(n1 == 0 || n2 == 0){
+                resp.innerHTML = "<h3>Todo valor multiplicado por zero, será zero como resultado</h3>"
+            } else if(n1 == 1 || n2 == 1){
+                let total = n1 * n2
+                resp.innerHTML = "<h3>Todo valor multiplicado por 1 (um), será ele mesmo como resultado</h3>"
+                resp.innerHTML += `<h3>O resultado de <strong>${n1}</strong> * <strong>${n2}</strong> 
+                    é igual a <strong>${total}!</strong></h3>`
+            }else{
+                let total = n1 * n2
+                resp.innerHTML = `<h3>O resultado de <strong>${n1}</strong> * <strong>${n2}</strong> é igual 
+                    a <strong>${total}!</strong></h3>`
+            }
+        }
+    </script>
+
+</body>
+</html>

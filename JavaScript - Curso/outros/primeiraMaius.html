@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin - Primeira Letra Maiúscula</title>
+
+    <style>
+        body{
+            background-color: rgb(208, 187, 162);
+            font: normal 20px Arial;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #cabecalho{
+            width: 850px;
+            padding: 25px;
+            color: rgb(68, 68, 68);
+        }
+        #conteudo{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            border-radius: 20px;
+            height: 300px;
+            width: 600px;
+            background-color: aliceblue;
+        }
+        #resposta{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #rodape{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: small;
+            padding: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="cabecalho">
+        <h1>Projeto Odin: Fundamentos em JavaScript</h1>
+        <h3>Função que pega uma string e a retorna com apenas 
+            a primeira letra maiúscula. Certificando de que aceita strings em letras 
+            minúsculas, MAIÚSCULAS ou ambas.
+        </h3>
+    </div>
+    <section id="conteudo">
+        <div id="pergunta">
+            <p>Olá, qual é o seu nome ? <input type="text" name="nome" id="nome"> 
+                <input type="button" value="Redigir" id="redigir" onclick="nomeMaiusculo()"></p>
+        </div>
+        <div id="resposta">
+        </div>
+    </section>
+    <footer id="rodape">
+        <p>The Odin Porjects &copy; Copyright</p>
+    </footer>
+
+    <script>
+        function nomeMaiusculo(){
+            let n = document.getElementById('nome')
+            let nome = String(n.value)
+            let nomeL = nome.toLowerCase()
+            let capitalized = nomeL[0].toUpperCase() + nomeL.substr(1);
+            
+            let res = document.getElementById('resposta')
+
+            res.innerHTML = `<p>Muito prazer em te conhecer ${capitalized}!</p>`
+        }
+    </script>
+</body>
+</html>

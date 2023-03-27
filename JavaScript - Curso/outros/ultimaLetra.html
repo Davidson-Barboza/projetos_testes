@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Odin Projects - Retornar a última letra</title>
+
+    <style>
+        body{
+            background-color: darkgrey;
+            font: normal 20px Arial;
+            color: rgb(58, 55, 55);
+        }
+    </style>
+
+</head>
+<body>
+    <section id="conteudo">
+        <p>Informe uma palavra ou frase:  <input type="text" name="str" id="str">
+            <input type="button" value="Clicar" id="clicar" onclick="ultimaLetra()">
+        </p>
+        <span id="resposta"></span>
+    </section>
+
+    <script>
+        function ultimaLetra(){
+            let palavra = document.getElementById('str')
+            let str = String(palavra.value)
+            let resp = document.querySelector('span#resposta')
+
+            let letra = str.slice(-1)
+
+            resp.innerHTML = `<p>A palavra digitada foi ${str} e a sua última letra é ${letra}</p>`
+
+        }
+    </script>
+
+</body>
+</html>

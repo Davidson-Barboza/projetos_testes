@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar + 7</title>
+    <style>
+        body{
+            background-color: rgb(73, 136, 138);
+            font: normal 18px Arial;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <h1>Incremendando + 7 em um valor</h1>
+    <h3>Informe um número: <input type="number" name= "valor" id="valor"> 
+    <input type="button" value="Somar" onclick="incrementar()"></h3>
+    <span >
+        <p id="resultado">O resultado é: </p>
+    </span>
+
+<script>
+    function incrementar(){
+        var n = document.querySelector('input#valor')
+        var txt = document.querySelector('p#resultado')
+        var numero = Number(n.value)
+        var total = numero + 7
+
+        txt.innerHTML = `<p>O resultado é: <strong>${total}</strong>!</p>`
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(66, 120, 122);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font: normal 20px Arial;
+    color: whitesmoke;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    height: 500px;
+    width: 500px;
+    border-radius: 10px;
+    
+}
+div{
+    font: normal 14px Arial;
+    color: black;
+    padding: 5px;
+}
+div#foto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
